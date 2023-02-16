@@ -16,19 +16,19 @@ void loop() {
   int s1 = digitalRead(9);
   int s2 = digitalRead(8);
   int s3 = digitalRead(7);
-  int s4 = digitalRead(1);
-  int s5 = digitalRead(1);
-  int s6 = digitalRead(1);
-  int s7 = digitalRead(1);
+  int s4 = digitalRead(6);
+  int s5 = digitalRead(5);
+  int s6 = digitalRead(4);
+  int s7 = digitalRead(3);
   
   int sOut0 = digitalRead(2);
   int sOut1 = digitalRead(11);
   int sOut2 = digitalRead(12);
   int sOut3 = digitalRead(13);
-  int sOut4 = digitalRead(2);
-  int sOut5 = digitalRead(2);
-  int sOut6 = digitalRead(2);
-  int sOut7 = digitalRead(2);
+  int sOut4 = digitalRead(A0);
+  int sOut5 = digitalRead(A1);
+  int sOut6 = digitalRead(A2);
+  int sOut7 = digitalRead(A3);
 
   Serial.print(s0);
  
