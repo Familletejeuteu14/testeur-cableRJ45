@@ -16,39 +16,39 @@ void loop() {
   int s1 = digitalRead(9);
   int s2 = digitalRead(8);
   int s3 = digitalRead(7);
-  //int s4 = digitalRead(1);
-  //int s5 = digitalRead(1);
-  //int s6 = digitalRead(1);
-  //int s7 = digitalRead(1);
+  int s4 = digitalRead(1);
+  int s5 = digitalRead(1);
+  int s6 = digitalRead(1);
+  int s7 = digitalRead(1);
   
   int sOut0 = digitalRead(2);
   int sOut1 = digitalRead(11);
   int sOut2 = digitalRead(12);
   int sOut3 = digitalRead(13);
-  //int sOut4 = digitalRead(2);
-  //int sOut5 = digitalRead(2);
-  //int sOut6 = digitalRead(2);
-  //int sOut7 = digitalRead(2);
+  int sOut4 = digitalRead(2);
+  int sOut5 = digitalRead(2);
+  int sOut6 = digitalRead(2);
+  int sOut7 = digitalRead(2);
 
   Serial.print(s0);
  
    Serial.print(s1);
     Serial.print(s2);
      Serial.print(s3);
-      //Serial.print(s4);
-       //Serial.print(s5);
-        //Serial.print(s6);
-         //Serial.print(s7);
-         //Serial.println();
+      Serial.print(s4);
+       Serial.print(s5);
+        Serial.print(s6);
+         Serial.print(s7);
+         Serial.println();
   Serial.print(sOut0);
   
     Serial.print(sOut1);
      Serial.print(sOut2);
       Serial.print(sOut3);
-      // Serial.print(sOut4);
-       // Serial.print(sOut5);
-         //Serial.print(sOut6);
-          //Serial.print(sOut7);
+      Serial.print(sOut4);
+        Serial.print(sOut5);
+         Serial.print(sOut6);
+          Serial.print(sOut7);
              Serial.println();
   delay(5000);
 }
