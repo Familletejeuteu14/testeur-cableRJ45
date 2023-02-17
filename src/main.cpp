@@ -1,54 +1,56 @@
 #include <Arduino.h>
 
-//const int pinA = 2;  // Broche utilisée pour le Keystone Jack A
-//const int pinB = 3;  // Broche utilisée pour le Keystone Jack BÀ
-//int pinA[8] = {10, 9, 8, 7, 6, 5, 4, 3}; // Broches du Keystone Jack A
-//int pinB[8] = {2, 11, 12, 13, A0, A1, A2, A3}; // Broches du Keystone Jack B
-
 void setup() {
-  pinMode(1, INPUT);
   pinMode(2, INPUT);
+  pinMode(3, INPUT);
+  pinMode(4, INPUT);
+  pinMode(5, INPUT);
+  pinMode(6, INPUT);
+  pinMode(7, INPUT);
+  pinMode(8, INPUT);
+  pinMode(9, INPUT);
+  pinMode(10, INPUT);
+  pinMode(11, INPUT);
+  pinMode(12, INPUT);
+  pinMode(13, INPUT);
+  pinMode(15, INPUT);
+  pinMode(16, INPUT);
+  pinMode(17, INPUT);
+  pinMode(18, INPUT);
+  
   Serial.begin(9600);
 }
 
 void loop() {
-  int s0 = digitalRead(10);
-  int s1 = digitalRead(9);
-  int s2 = digitalRead(8);
-  int s3 = digitalRead(7);
-  int s4 = digitalRead(6);
-  int s5 = digitalRead(5);
-  int s6 = digitalRead(4);
-  int s7 = digitalRead(3);
+  int s0 = digitalRead(10);//blanc-orange
+  int s1 = digitalRead(9);//orange
+  int s2 = digitalRead(8);//blanc-vert
+  int s3 = digitalRead(7);//bleu
+  int s4 = digitalRead(6);//blanc-bleu
+  int s5 = digitalRead(5);//vert
+  int s6 = digitalRead(4);//blanc-brun
+  int s7 = digitalRead(3);//brun
   
-  int sOut0 = digitalRead(2);
-  int sOut1 = digitalRead(11);
-  int sOut2 = digitalRead(12);
-  int sOut3 = digitalRead(13);
-  int sOut4 = digitalRead(A0);
-  int sOut5 = digitalRead(A1);
-  int sOut6 = digitalRead(A2);
-  int sOut7 = digitalRead(A3);
-
-  Serial.print(s0);
+  int sOut0 = digitalRead(2);//blanc-orange
+  int sOut1 = digitalRead(11);//orange
+  int sOut2 = digitalRead(12);//blanc-vert
+  int sOut3 = digitalRead(13);//bleu
+  int sOut4 = digitalRead(15);//blanc-bleu
+  int sOut5 = digitalRead(16);//vert
+  int sOut6 = digitalRead(17);//blanc-brun
+  int sOut7 = digitalRead(18);//brun
  
-   Serial.print(s1);
-    Serial.print(s2);
-     Serial.print(s3);
-      Serial.print(s4);
-       Serial.print(s5);
-        Serial.print(s6);
-         Serial.print(s7);
-         Serial.println();
-  Serial.print(sOut0);
-  
-    Serial.print(sOut1);
-     Serial.print(sOut2);
-      Serial.print(sOut3);
-      Serial.print(sOut4);
-        Serial.print(sOut5);
-         Serial.print(sOut6);
-          Serial.print(sOut7);
-             Serial.println();
-  delay(5000);
+if(s0 == sOut0 && s1 == sOut1 && s2 == sOut2 && s3 == sOut3 && s4 == sOut4 && s5 == sOut5 && s6 == sOut6 && s7 == sOut7)
+{
+    Serial.println("cable droit");
+        delay(5000);
+}else if( s0 == sOut2 && s1 == sOut5 && s2 == sOut0 && s3 == sOut3 && s4 == sOut4 && s5 == sOut1 && s6 == sOut6 && s7 == sOut7)
+{
+  Serial.println("cable croisé");
+        delay(5000);
+}else{
+  Serial.println("cable non fonctionel");
+}
+
+
 }
